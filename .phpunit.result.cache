@@ -1,1 +1,1 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":154:{a:2:{s:7:"defects";a:1:{s:41:"Tests\Unit\chapter1Test::its_mallard_duck";i:4;}s:5:"times";a:1:{s:41:"Tests\Unit\chapter1Test::its_mallard_duck";d:0.104;}}}
+C:37:"PHPUnit\Runner\DefaultTestResultCache":260:{a:2:{s:7:"defects";a:2:{s:41:"Tests\Unit\chapter1Test::its_mallard_duck";i:4;s:39:"Tests\Unit\chapter1Test::its_model_duck";i:3;}s:5:"times";a:2:{s:41:"Tests\Unit\chapter1Test::its_mallard_duck";d:0.096;s:39:"Tests\Unit\chapter1Test::its_model_duck";d:0.006;}}}
