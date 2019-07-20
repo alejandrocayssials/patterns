@@ -1,21 +1,25 @@
 <?php
 namespace App\chapter2;
 
-class CurrentCondition implements Observer
+class CurrentCondition implements Observer, DisplayElement
 {
-    public $max;
-    public $min;
-    public $current;
-
+	
+    public $weatherData;
+    
+    public function __construct(Subject $subject)
+	{
+        $this->weatherData = $subject;
+        $subject->registerObserver($this); 
+    }
+    
     public function update($temp, $humidity, $pressure)
     {
-        $this->max = $temp['max'];
-        $this->min = $temp['min'];
-        $this->current = $temp['current'];
+        $this->temp = $temp;
+        $this->humidity = $humidity;
     }
 
     public function display()
     {
-        return "Actual condition: $this->current";
+        return "Current conditions: $this->temp F and $this->humidity %";
     }
 }

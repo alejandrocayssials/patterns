@@ -15,11 +15,11 @@ class WeatherData implements Subject
         $this->observers = array();
     }
     
-    public function setMeassurents()
+    public function setMeassurents($temp, $humidity, $pressure)
     {
-        $this->temp = $this->getTemperature();
-        $this->humidity = $this->getHumidity();
-        $this->pressure = $this->getPressure();
+        $this->temp = $temp;
+        $this->humidity = $humidity;
+        $this->pressure = $pressure;
 
         $this->meassurementsChanged();
     }
