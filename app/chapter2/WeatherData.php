@@ -8,12 +8,7 @@ class WeatherData implements Subject
     public $humidity;
     public $pressure;
 
-    public $observers;
-
-    public function __construct()
-	{
-        $this->observers = array();
-    }
+    public $observers = array();
     
     public function setMeassurents($temp, $humidity, $pressure)
     {
@@ -46,33 +41,4 @@ class WeatherData implements Subject
         unset($this->observers, $o);
     }
 
-    public function getTemperature()
-    {
-        $data[] = [ 
-            'max' => 48,
-            'min' => 25,
-            'current' => 34,
-            'day' => 25-05-2019,
-         ];
-        
-        return $data;
-    }
-
-    public function getHumidity()
-    {
-        $data[] = [ 
-            'humidity' => 25,
-         ];
-        
-        return $data;
-    }
-
-    public function getPressure()
-    {
-        $data[] = [ 
-            'pressure' => 25,
-         ];
-        
-        return $data;
-    }
 }
